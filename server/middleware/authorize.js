@@ -8,7 +8,6 @@ const authorize = (role) => {
       return res.status(401).json({ message: 'Unauthorized - No token provided' });
     }
 
-    // Assuming the token is in the format: Bearer <token>
     const tokenParts = token.split(' ');
     const tokenValue = tokenParts[1];
 

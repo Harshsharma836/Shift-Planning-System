@@ -30,15 +30,7 @@ const getEmployeeAvailability = async (req, res) => {
 const createShift = async (req, res) => {
   try {
 
-    /*
-        date,
-        startTime,
-        endTime,
-        timezone,
-        employeeId: selectedEmployee,
-    */
     const { date, startTime, endTime, timezone , employeeId} = req.body;
-    console.log({date, startTime, endTime, timezone , employeeId})
     // Fetch admin's timezone
     const admin = await User.findOne({_id : req.user.userId});
 
